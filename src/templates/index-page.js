@@ -4,6 +4,7 @@ import { Link, graphql } from 'gatsby'
 
 import Layout from '../components/Layout'
 import BlogRoll from '../components/BlogRoll'
+import headerPic from '../img/header.jpg'
 
 export const IndexPageTemplate = ({
   image,
@@ -15,7 +16,7 @@ export const IndexPageTemplate = ({
       className="full-width-image margin-top-0"
       style={{
         backgroundImage: `url(${
-          !!image.childImageSharp ? image.childImageSharp.fluid.src : image
+          headerPic
         })`,
         backgroundPosition: `top left`,
         backgroundAttachment: `fixed`,

@@ -3,6 +3,7 @@ import Layout from '../components/Layout'
 import { Link, graphql } from 'gatsby'
 import PreviewCompatibleImage from '../components/PreviewCompatibleImage'
 import PagenationBar from '../components/PagenationBar'
+import headerPic from '../img/header.jpg'
 
 export default class BlogIndexPage extends React.Component {
   render() {
@@ -14,15 +15,17 @@ export default class BlogIndexPage extends React.Component {
         <div
           className="full-width-image-container margin-top-0"
           style={{
-            backgroundImage: `url('/img/blog-index.jpg')`,
+            backgroundImage: `url(${
+              headerPic
+            })`,
             height: '150px',
           }}
         >
           <h1
             className="has-text-weight-bold is-size-1"
             style={{
-              boxShadow: '0.5rem 0 0 #f40, -0.5rem 0 0 #f40',
-              backgroundColor: '#f40',
+              boxShadow: '0.5rem 0 0 #698474, -0.5rem 0 0 #698474',
+              backgroundColor: '#698474',
               color: 'white',
               padding: '0.25rem',
             }}
@@ -71,7 +74,7 @@ export default class BlogIndexPage extends React.Component {
                           <br />
                           <br />
                           <Link className="button" to={post.fields.slug}>
-                            Keep Reading →
+                            Read →
                           </Link>
                         </p>
                       </article>
