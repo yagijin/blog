@@ -16,29 +16,30 @@ const Footer = class extends React.Component {
               <div className="column is-4">
                 <section className="menu">
                   <ul className="menu-list">
-                    <li>
+                    <li  className="menu-child">
                       <Link to="/" className="navbar-item">
                         Home
                       </Link>
                     </li>
-                    <li>
+                    <li  className="menu-child">
                       <Link className="navbar-item" to="/about">
                         About
+                      </Link>
+                    </li>
+                    <li  className="menu-child">
+                      <Link className="navbar-item" to="/blog">
+                        Blogs
+                      </Link>
+                    </li>
+                    <li  className="menu-child">
+                      <Link className="navbar-item" to="/privacy">
+                        Privacy Policy
                       </Link>
                     </li>
                   </ul>
                 </section>
               </div>
               <div className="column is-4">
-                <section>
-                  <ul className="menu-list">
-                    <li>
-                      <Link className="navbar-item" to="/blog">
-                        Latest Stories
-                      </Link>
-                    </li>
-                  </ul>
-                </section>
               </div>
               <div className="column is-4 social">
                 <a title="facebook" href="https://facebook.com/yagijim">
@@ -70,6 +71,11 @@ const Footer = class extends React.Component {
                     style={{ width: '1em', height: '1em' }}
                   />
                 </a>
+              </div>
+            </div>
+            <div className="columns">
+              <div className="column is-12">
+                <div>Copyright © Jin Yagi 2020 - All Rights Reserved.</div>
               </div>
             </div>
           </div>

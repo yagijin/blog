@@ -2,13 +2,12 @@
 
 // Config vars
 // Kaldi logo brand color: #FD461E
-$kaldi-red: #D64000
-$kaldi-red-invert: #fff
+$primary: #698474
+$primary-invert: #fff
 
-$primary: $kaldi-red
-$primary-invert: $kaldi-red-invert
 $body-color: #333
 $black: #2b2523
+$backcolor: #B1CCA9
 
 .navbar .navbar-menu
   box-shadow:none !important
@@ -61,12 +60,14 @@ $black: #2b2523
     border-radius: .25rem
     text-decoration: none
     font-weight: 700
-    color: #CC3700
+    color: $primary
     text-align: center
-    -webkit-box-shadow: inset 0 0 0 2px #CC3700
-    box-shadow: inset 0 0 0 2px #f40
+    -webkit-box-shadow: inset 0 0 0 2px $primary
+    box-shadow: inset 0 0 0 2px $primary
     -webkit-transition: all .15s ease
     transition: all .15s ease
+.btn:hover 
+  color: grey
 
 .margin-top-0
   margin-top: 0 !important
@@ -88,9 +89,9 @@ footer.footer
 $menu-item-color: $white-ter
 $menu-item-hover-color: $black !important
 $menu-item-hover-background-color: $black
-$menu-item-active-color: $kaldi-red-invert
-$menu-item-active-background-color:	$kaldi-red-invert
-$menu-list-border-left: 1px solid $kaldi-red-invert
+$menu-item-active-color: $primary-invert
+$menu-item-active-background-color:	$primary-invert
+$menu-list-border-left: 1px solid $primary-invert
 $menu-label-color: $white-ter
 
 
@@ -100,6 +101,9 @@ $menu-label-color: $white-ter
 .menu-list
   list-style: none !important
   text-align: left
+  display: inline-block !important
+.menu-child
+  display: inline-block !important
 .social
   padding: 2em
 .social a
@@ -123,6 +127,24 @@ $menu-label-color: $white-ter
   margin: 0 1.5em 0 0;
 
 
+.pagenation-bar
+  background: $black
+  display: flex
+  justify-content: space-between
+  border-radius: 5px
+  padding: 5px 5px
+.pagenation-text, .pagenation-button, .pagenation-button-link
+  color: white
+  font-weight: bold
+.pagenation-button
+  margin: 0 10px
+.pagenation-button-link:hover
+  color: grey
+.pagenation-button-link-disabled
+  pointer-events: none
+  color: grey
+  font-weight: bold
+  
 @import "~bulma"
 
 

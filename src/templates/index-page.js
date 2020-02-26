@@ -26,8 +26,8 @@ export const IndexPageTemplate = ({
         className="has-text-weight-bold is-size-3-mobile is-size-2-tablet is-size-1-widescreen"
         style={{
           boxShadow:
-            'rgb(255, 68, 0) 0.5rem 0px 0px, rgb(255, 68, 0) -0.5rem 0px 0px',
-          backgroundColor: 'rgb(255, 68, 0)',
+            '#698474 0.5rem 0px 0px, #698474 -0.5rem 0px 0px',
+          backgroundColor: '#698474',
           color: 'white',
           lineHeight: '1',
           padding: '0.25em',
@@ -36,9 +36,9 @@ export const IndexPageTemplate = ({
         {title}
       </h1>
     </div>
-    <section className="section section--gradient">
+    <section className="section section--gradient" style={{paddingBottom: "10px"}}>
       <div className="container">
-        <div className="section">
+        <div className="section" style={{paddingBottom: "0px"}}>
           <div className="columns">
             <div className="column is-10 is-offset-1">
               <div className="content">
@@ -47,7 +47,7 @@ export const IndexPageTemplate = ({
                     {heading}
                   </h3>
                   <BlogRoll />
-                  <div className="column is-12 has-text-centered">
+                  <div className="column is-12 has-text-centered"  style={{marginTop: "20px"}}>
                     <Link className="btn" to="/blog">
                       Read more
                     </Link>

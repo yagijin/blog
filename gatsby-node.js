@@ -47,11 +47,27 @@ exports.createPages = ({ actions, graphql }) => {
     })
 
     const postsPerPage = 6
-    const numPages = Math.ceil(posts.length / postsPerPage)
+    let postsLength = 0;
+    for(let i=0;i<posts.length;i++){
+      posts[i].node.frontmatter.templateKey==="blog-post"?postsLength++:postsLength;
+    }
+    const numPages = Math.ceil(postsLength / postsPerPage)
+
+    createPage({
+      path: `/blog`,
+      component: path.resolve("./src/templates/blog-page.js"),
+      context: {
+        limit: postsPerPage,
+        skip: 0,
+        numPages,
+        currentPage: 1,
+      },
+    })
+
     Array.from({ length: numPages }).forEach((_, i) => {
       createPage({
-        path: i === 0 ? `/blogs` : `/blogs/${i + 1}`,
-        component: path.resolve("./src/pages/blog/index.js"),
+        path: `/blog/${i + 1}`,
+        component: path.resolve("./src/templates/blog-page.js"),
         context: {
           limit: postsPerPage,
           skip: i * postsPerPage,
