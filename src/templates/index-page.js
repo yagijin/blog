@@ -14,12 +14,11 @@ export const IndexPageTemplate = ({
 }) => (
   <>
     <Header title={"やぎじんのブログ"}/>
-    <GetAllTags/>
-    <section className="section section--gradient" style={{paddingBottom: "10px"}}>
+    <section className="section section--gradient" style={{padding: "10px"}}>
       <div className="container">
         <div className="section" style={{paddingBottom: "0px"}}>
           <div className="columns">
-            <div className="column is-10 is-offset-1">
+            <div className="column is-three-quarters">
               <div className="content">
                 <div className="column is-12">
                   <h3 className="has-text-weight-semibold is-size-2">
@@ -33,6 +32,12 @@ export const IndexPageTemplate = ({
                   </div>
                 </div>
               </div>
+            </div>
+            <div>
+              <h3 className="has-text-weight-semibold is-size-2 tag-title">
+                人気のタグ
+              </h3>
+              <GetAllTags/>
             </div>
           </div>
         </div>

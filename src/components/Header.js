@@ -8,9 +8,7 @@ export default function Header (props) {
     <div
     className="full-width-image margin-top-0"
     style={{
-      backgroundImage: `url(${
-        headerPic
-      })`,
+      backgroundColor: "#698474",
       backgroundPosition: `top left`,
       backgroundAttachment: `fixed`,
       height: '150px'
@@ -21,10 +19,12 @@ export default function Header (props) {
       style={{
         boxShadow:
           '#698474 0.5rem 0px 0px, #698474 -0.5rem 0px 0px',
-        backgroundColor: '#698474',
-        color: 'white',
+        backgroundColor: "white",
         lineHeight: '1',
         padding: '0.25em',
+        fontFamily: 'TsukuARdGothic-Regular',
+        fontWeight: "bold",
+        borderRadius: "5px"
       }}
     >
       <Link to="/" className="title-link">
