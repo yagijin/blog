@@ -1,5 +1,4 @@
 import React from 'react'
-import headerPic from '../img/header.jpg'
 import { Link } from 'gatsby'
 
 export default function Header (props) {
