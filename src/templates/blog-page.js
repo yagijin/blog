@@ -3,7 +3,7 @@ import Layout from '../components/Layout'
 import { Link, graphql } from 'gatsby'
 import PreviewCompatibleImage from '../components/PreviewCompatibleImage'
 import PagenationBar from '../components/PagenationBar'
-import headerPic from '../img/header.jpg'
+import Header from '../components/Header'
 
 export default class BlogIndexPage extends React.Component {
   render() {
@@ -12,30 +12,13 @@ export default class BlogIndexPage extends React.Component {
  
     return (
       <Layout>
-        <div
-          className="full-width-image-container margin-top-0"
-          style={{
-            backgroundImage: `url(${
-              headerPic
-            })`,
-            height: '150px',
-          }}
-        >
-          <h1
-            className="has-text-weight-bold is-size-1"
-            style={{
-              boxShadow: '0.5rem 0 0 #698474, -0.5rem 0 0 #698474',
-              backgroundColor: '#698474',
-              color: 'white',
-              padding: '0.25rem',
-            }}
-          >
-            記事アーカイブ
-          </h1>
-        </div>
+        <Header title={"やぎじんのブログ"}/>
         <section className="section">
           <div className="container">
             <div className="content">
+              <h3 className="has-text-weight-semibold is-size-2">
+                {this.props.pageContext.currentPage+"ページ"}
+              </h3>
               <div className="columns is-multiline">
                 {posts &&
                   posts.map(({ node: post }) => (

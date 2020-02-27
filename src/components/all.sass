@@ -9,6 +9,12 @@ $body-color: #333
 $black: #2b2523
 $backcolor: #CFE2CA
 
+.title-link
+  color: white
+
+.title-link:hover
+  color: $black
+
 .is-featured
   background-color: $backcolor !important
 
@@ -131,21 +137,22 @@ $menu-label-color: $white-ter
 
 
 .pagenation-bar
-  background: $black
+  background: $primary
   display: flex
   justify-content: space-between
   border-radius: 5px
   padding: 5px 5px
+  margin-top: 30px
 .pagenation-text, .pagenation-button, .pagenation-button-link
   color: white
   font-weight: bold
 .pagenation-button
   margin: 0 10px
 .pagenation-button-link:hover
-  color: grey
+  color: $black
 .pagenation-button-link-disabled
   pointer-events: none
-  color: grey
+  color: $primary
   font-weight: bold
   
 @import "~bulma"
