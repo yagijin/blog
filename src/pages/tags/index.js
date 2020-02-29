@@ -14,7 +14,7 @@ const TagsPage = ({
   },
 }) => (
   <Layout>
-    <Header title={"やぎじんのサイト"}/>
+    <Header/>
     <section className="section">
       <Helmet title={`Tags | ${title}`} />
       <div className="container content">

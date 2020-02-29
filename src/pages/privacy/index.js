@@ -5,7 +5,7 @@ import Header from '../../components/Header'
 
 const PrivacyPolicyPage = () => (
   <Layout>
-    <Header title={"やぎじんのブログ"}/>
+    <Header/>
     <section className="section section--gradient" style={{paddingTop: "0px"}}>
       <div className="container">
         <div className="section" style={{paddingBottom: "0px"}}>

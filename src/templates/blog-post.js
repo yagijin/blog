@@ -19,7 +19,7 @@ export const BlogPostTemplate = ({
 
   return (
     <>
-    <Header title={"やぎじんのブログ"}/>
+    <Header/>
     <section className="section">
       {helmet || ''}
       <div className="container content">

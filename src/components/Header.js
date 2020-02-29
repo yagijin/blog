@@ -1,17 +1,11 @@
 import React from 'react'
 import { Link } from 'gatsby'
 
-export default function Header (props) {
+export default function Header () {
 
   return(
     <div
-    className="full-width-image margin-top-0"
-    style={{
-      backgroundColor: "#698474",
-      backgroundPosition: `top left`,
-      backgroundAttachment: `fixed`,
-      height: '150px'
-    }}
+    className="full-width-image margin-top-0 header-box"
     >
     <h1
       className="has-text-weight-bold is-size-3-mobile is-size-2-tablet is-size-1-widescreen"
@@ -27,7 +21,7 @@ export default function Header (props) {
       }}
     >
       <Link to="/" className="title-link">
-        {props.title}
+        YAGIJIN'S BLOG
       </Link>
     </h1>
     </div>

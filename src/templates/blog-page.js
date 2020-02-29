@@ -12,7 +12,7 @@ export default class BlogIndexPage extends React.Component {
  
     return (
       <Layout>
-        <Header title={"やぎじんのブログ"}/>
+        <Header/>
         <section className="section">
           <div className="container">
             <div className="content">
