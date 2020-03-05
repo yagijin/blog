@@ -71,6 +71,9 @@ module.exports = {
               destinationDir: 'static',
             },
           },
+          {
+            resolve: "gatsby-remark-embed-youtube",
+          }
         ],
       },
     },
