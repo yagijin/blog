@@ -10,7 +10,7 @@ const TemplateWrapper = ({ children }) => {
   return (
     <div>
       <Helmet>
-        <html lang="en" />
+        <html lang="ja"/>
         <title>{title}</title>
         <meta name="description" content={description} />
 
@@ -45,7 +45,7 @@ const TemplateWrapper = ({ children }) => {
         <meta property="og:url" content="https://blog.yagijin.com" />
         <meta
           property="og:image"
-          content={`${withPrefix('/')}img/og-image.png`}
+          content={`${withPrefix('/')}img/og-image.jpg`}
         />
       </Helmet>
       <div className="main-page-content">
