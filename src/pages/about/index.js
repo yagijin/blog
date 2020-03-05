@@ -24,6 +24,9 @@ const AboutPage = () => (
                   <p>
                     このサイトはやぎじんの技術や趣味のブログです．
                   </p>
+                  <p>
+                    <a href="https://portfolio.yagijin.com">ポートフォリオ</a>もあるのでよかったら遊んでください．
+                  </p>
                   <div className="column is-12 about-social">
                     <a title="facebook" href="https://facebook.com/yagijim">
                       <img
