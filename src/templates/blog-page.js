@@ -53,12 +53,7 @@ export default class BlogIndexPage extends React.Component {
                           </p>
                         </header>
                         <p>
-                          {post.excerpt}
-                          <br />
-                          <br />
-                          <Link className="button" to={post.fields.slug}>
-                            Read →
-                          </Link>
+                          {post.frontmatter.description}
                         </p>
                       </article>
                     </div>
@@ -83,7 +78,7 @@ export const BlogIndexPageQuery = graphql`
     ) {
       edges {
         node {
-          excerpt(pruneLength: 400)
+          excerpt(pruneLength: 100)
           id
           fields {
             slug
@@ -91,6 +86,7 @@ export const BlogIndexPageQuery = graphql`
           frontmatter {
             title
             templateKey
+            description
             date(formatString: "MMMM DD, YYYY")
             featuredpost
             featuredimage {
