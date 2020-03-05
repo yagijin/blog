@@ -42,7 +42,7 @@ class BlogRoll extends React.Component {
                     </span>
                   </p>
                 </header>
-                <p>
+                <p className="blog-content-main">
                   {post.excerpt}
                   <br />
                   <br />
