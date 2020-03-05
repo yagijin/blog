@@ -55,6 +55,7 @@ export const BlogPostTemplate = ({
 BlogPostTemplate.propTypes = {
   content: PropTypes.node.isRequired,
   contentComponent: PropTypes.func,
+  featuredimage: PropTypes.string,
   description: PropTypes.string,
   title: PropTypes.string,
   helmet: PropTypes.object,
@@ -73,10 +74,10 @@ const BlogPost = ({ data }) => {
         helmet={
           <Helmet titleTemplate="%s | Blog">
             <title>{`${post.frontmatter.title}`}</title>
-            <meta
-              name="description"
-              content={`${post.frontmatter.description}`}
-            />
+            <meta name="description" content={`${post.frontmatter.description}`}/>
+            <meta property='og:title' content={`${post.frontmatter.title}`} />
+            <meta property='og:description' content={`${post.frontmatter.description}`} />
+            <meta property='og:image' content={`${post.frontmatter.featuredimage}`} />
           </Helmet>
         }
         tags={post.frontmatter.tags}
@@ -103,6 +104,13 @@ export const pageQuery = graphql`
         date(formatString: "MMMM DD, YYYY")
         title
         description
+        featuredimage {
+          childImageSharp {
+            fluid(maxWidth: 120, quality: 100) {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
         tags
       }
     }
