@@ -55,7 +55,7 @@ export const BlogPostTemplate = ({
 BlogPostTemplate.propTypes = {
   content: PropTypes.node.isRequired,
   contentComponent: PropTypes.func,
-  featuredimage: PropTypes.string,
+  featuredimage: PropTypes.object,
   description: PropTypes.string,
   title: PropTypes.string,
   helmet: PropTypes.object,
@@ -77,7 +77,7 @@ const BlogPost = ({ data }) => {
             <meta name="description" content={`${post.frontmatter.description}`}/>
             <meta property='og:title' content={`${post.frontmatter.title}`} />
             <meta property='og:description' content={`${post.frontmatter.description}`} />
-            <meta property='og:image' content={`${post.frontmatter.featuredimage}`} />
+            <meta property='og:image' content={`${post.frontmatter.featuredimage.childImageSharp.fluid.src}`} />
           </Helmet>
         }
         tags={post.frontmatter.tags}
@@ -107,7 +107,7 @@ export const pageQuery = graphql`
         featuredimage {
           childImageSharp {
             fluid(maxWidth: 120, quality: 100) {
-              ...GatsbyImageSharpFluid
+              src
             }
           }
         }
