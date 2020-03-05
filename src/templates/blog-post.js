@@ -77,7 +77,7 @@ const BlogPost = ({ data }) => {
             <meta name="description" content={`${post.frontmatter.description}`}/>
             <meta property='og:title' content={`${post.frontmatter.title}`} />
             <meta property='og:description' content={`${post.frontmatter.description}`} />
-            <meta property='og:image' content={`${origin}${post.frontmatter.featuredimage.childImageSharp.fluid.src}`} />
+            <meta property='og:image' content={`https://blog.yagijin.com${post.frontmatter.featuredimage.childImageSharp.fluid.src}`} />
             <meta property="og:type" content="article" />
           </Helmet>
         }
