@@ -23,11 +23,11 @@ const TagsPage = ({
             className="column is-10 is-offset-1"
             style={{ marginBottom: '6rem' }}
           >
-            <h1 className="title is-size-2 is-bold-light">Tags</h1>
+            <h1 className="title is-size-2 is-bold-light">全てのタグ</h1>
             <ul className="taglist">
               {group.map(tag => (
-                <li key={tag.fieldValue}>
-                  <Link to={`/tags/${kebabCase(tag.fieldValue)}/`}>
+                <li key={tag.fieldValue} className="outtag">
+                  <Link to={`/tags/${kebabCase(tag.fieldValue)}/`} className="intag">
                     {tag.fieldValue} ({tag.totalCount})
                   </Link>
                 </li>
