@@ -3,6 +3,7 @@ module.exports = {
     title: 'Yagijin\'s Blog',
     description:
       'This page is Yagijin\'s Blog.',
+    siteUrl: `https://blog.yagijin.com`,
   },
   plugins: [
     'gatsby-plugin-react-helmet',
@@ -44,6 +45,7 @@ module.exports = {
         name: 'images',
       },
     },
+    `gatsby-plugin-sitemap`,
     'gatsby-plugin-sharp',
     'gatsby-transformer-sharp',
     {
