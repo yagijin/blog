@@ -24,9 +24,7 @@ export default class BlogIndexPage extends React.Component {
                   posts.map(({ node: post }) => (
                     <div className="is-parent column is-12" key={post.id}>
                       <article
-                        className={`blog-list-item tile is-child box notification ${
-                          post.frontmatter.featuredpost ? 'is-featured' : ''
-                        }`}
+                        className={`blog-list-item tile is-child box notification`}
                       >
                         <header>
                           {post.frontmatter.featuredimage ? (
@@ -88,7 +86,6 @@ export const BlogIndexPageQuery = graphql`
             templateKey
             description
             date(formatString: "MMMM DD, YYYY")
-            featuredpost
             featuredimage {
               childImageSharp {
                 fluid(maxWidth: 120, quality: 100) {
