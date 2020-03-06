@@ -42,7 +42,6 @@ const TemplateWrapper = ({ children }) => {
         <meta property="og:type" content="website" />
         <meta property="og:title" content={title} />
         <meta property="og:site_name" content="Yagijin\'s Blog" />
-        <meta property="og:url" content="https://blog.yagijin.com" />
         <meta
           property="og:image"
           content={`https://blog.yagijin.com/img/og-image.png`}
