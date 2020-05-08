@@ -75,6 +75,16 @@ module.exports = {
           },
           {
             resolve: "gatsby-remark-embed-youtube",
+          },
+          {
+            resolve: `gatsby-remark-prismjs`,
+              options: {
+                classPrefix: "language-",
+                inlineCodeMarker: null,
+                aliases: {js:"javascript"},
+                showLineNumbers: true,
+                noInlineHighlight: false,
+              },
           }
         ],
       },

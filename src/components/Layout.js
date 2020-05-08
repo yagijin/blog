@@ -4,6 +4,7 @@ import Footer from '../components/Footer'
 import './all.sass'
 import useSiteMetadata from './SiteMetadata'
 import { withPrefix } from 'gatsby'
+import "prismjs/themes/prism-tomorrow.css"
 
 const TemplateWrapper = ({ children }) => {
   const { title, description } = useSiteMetadata()

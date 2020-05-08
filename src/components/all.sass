@@ -1,13 +1,11 @@
-@import "~bulma/sass/utilities/initial-variables"
-
 // Config vars
-// Kaldi logo brand color: #FD461E
 $primary: #698474
 $primary-invert: #fff
 
 $body-color: #333
 $black: #2b2523
 $backcolor: #CFE2CA
+$white-ter: white
 
 h2 a 
   color: $primary
@@ -231,18 +229,4 @@ $menu-label-color: $white-ter
   color: $primary
   font-weight: bold
   
-@import "~bulma"
-
-
-// responsiveness
-+tablet-only
-  .blog-list-item .featured-thumbnail
-    flex-basis: 50%
-
-+mobile
-  .blog-list-item header
-    display: block
-  .blog-list-item .featured-thumbnail
-    text-align: center
-    max-width: 70%
-    margin: 0 0 1em
+@import "./bulma.css"

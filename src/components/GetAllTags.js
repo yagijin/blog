@@ -9,7 +9,7 @@ const GetAllTags = ({
 }) => (
     <ul className="taglist tag-list">
       {group.map(tag => (
-        <li key={tag.fieldValue} className="tag is-primary is-medium tag-child">
+        <li key={tag.fieldValue} className="tag-all is-primary is-medium tag-child">
           <Link to={`/tags/${kebabCase(tag.fieldValue)}/`} className="tag-child-link">
             {tag.fieldValue} ({tag.totalCount})
           </Link>
