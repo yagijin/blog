@@ -10,11 +10,13 @@ tags:
   - WebAPI
   - Chrome
 ---
+![top](/img/animalcrossing-arduino.jpeg "top")
+
 以前に，TwitterでArduinoかラズパイ+近接センサを使用して腕立て伏せの回数を測っている人を見ました，面白いアイデアだったのでとりあえずそれを同じようにスマホでブラウザからやってみることを目標にします．
 
 ## 最終的なプロダクト
-腕立てしている様子を自分で取るのは難しくてできませんでした笑
-`youtube:https://www.youtube.com/embed/PH6q30R4lOg`
+
+腕立てしている様子を自分で取るのは難しくてできませんでした笑 `youtube:https://www.youtube.com/embed/PH6q30R4lOg`
 
 ## 環境について
 
@@ -48,6 +50,7 @@ Android側で開発者モードをOnにして，USBデバックを許可し，Ch
 ![chrome-flag](/img/chrome-flag.png "chromeFlag")
 
 ## https
+
 http経由ではこのGeneric Sensor APIを使えないようなので,自分でローカル環境へのSSL証明書設定を行うか，[ngrok](https://ngrok.com/)を使うか，デプロイするなどしてhttps経由で行ってください．
 
 ## 実装
@@ -58,14 +61,14 @@ http経由ではこのGeneric Sensor APIを使えないようなので,自分で
 
 MDNで推奨されている方法通りに，PermissionAPIを用いて，使用するセンサータイプにあらかじめ許可を与えます．今回は'ambient-light-sensor'です．
 
-その後，使用したいセンサを扱うオブジェクトを初期化します． この時に引数でセンサのサンプリング周波数を設定することができます． サンプリング周波数は，1秒間に取得するサンプル数のことでHzで表します．
-今回は，腕立て伏せの回数を測るだけなので1秒間に5回（5Hz）もあれば十分だと思います．
+その後，使用したいセンサを扱うオブジェクトを初期化します． この時に引数でセンサのサンプリング周波数を設定することができます． サンプリング周波数は，1秒間に取得するサンプル数のことでHzで表します． 今回は，腕立て伏せの回数を測るだけなので1秒間に5回（5Hz）もあれば十分だと思います．
 
 センサの値を読み込んだ際のイベントリスナを登録します． この例では，1秒間に5回センサの出力がコンソールに表示されるように設定しました．
 
 最後にstart()でセンサの読み取りを開始します．
 
 #### main.js
+
 ```js
 navigator.permissions.query({ name: 'ambient-light-sensor' })
 .then(result => {
@@ -185,8 +188,7 @@ function pressed() {
 
 ## 終わりに
 
-腕立てしている様子を自分で取るのは難しくてできませんでした笑
-`youtube:https://www.youtube.com/embed/PH6q30R4lOg`
+腕立てしている様子を自分で取るのは難しくてできませんでした笑 `youtube:https://www.youtube.com/embed/PH6q30R4lOg`
 
 他にも加速度センサなどがあるので信号処理の勉強がてら遊び倒してみたいと思います． また時間があったらブログに書こうと思います．
 
