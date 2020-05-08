@@ -260,7 +260,7 @@ a.box:active {
 .notification {
   background-color: white;
   border-radius: 4px;
-  padding: 1.25rem 2.5rem 1.25rem 1.5rem;
+  padding: 1.25rem 1.5rem 1.25rem 1.5rem;
   position: relative; }
   .notification a:not(.button):not(.dropdown-item) {
     color: currentColor;
@@ -670,8 +670,19 @@ a.navbar-item {
 
 @media screen and (max-width: 768px) {
   .blog-list-item header {
-    display: block; }
+    flex-direction: column;
+    max-width: 100%;
+  }
   .blog-list-item .featured-thumbnail {
+    align-items: center;
     text-align: center;
-    max-width: 70%;
-    margin: 0 0 1em; } }
+    max-width: 100%;
+    margin: 0 0 1em; 
+  }
+  .featured-thumbnail {
+    width: 100%;
+  }
+  .post-meta {
+    margin-top: 20px;
+  }
+}
