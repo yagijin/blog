@@ -77,7 +77,7 @@ MDNで推奨されている方法通りに，PermissionAPIを用いて，使用�
 
 #### main.js
 
-```js
+```js{numberLines: true}
 navigator.permissions.query({ name: 'ambient-light-sensor' })
 .then(result => {
   if (result.state === 'denied') {
@@ -112,7 +112,7 @@ navigator.permissions.query({ name: 'ambient-light-sensor' })
 
 #### sample.js
 
-```js
+```js{numberLines: true}
 let sensor;
 
 const params = {
@@ -174,7 +174,7 @@ function pressed() {
 
 #### index.html
 
-```html
+```html{numberLines: true}
 <!DOCTYPE html>
   <head>
     <meta charset="utf-8">
