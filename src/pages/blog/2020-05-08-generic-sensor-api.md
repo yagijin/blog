@@ -2,11 +2,7 @@
 templateKey: blog-post
 title: Generic Sensor API
 date: 2020-05-08T03:27:32.519Z
-description: >-
-  Webでデバイスのセンサをいじってみる記事です．
-
-  参考サイト：[MDN:Sensor
-  APIs](https://developer.mozilla.org/en-US/docs/Web/API/Sensor_APIs)
+description: Webでデバイスのセンサをいじってみる記事です．
 featuredimage: /img/animalcrossing-arduino.jpeg
 tags:
   - Generic Sensor API
@@ -16,7 +12,7 @@ tags:
 ---
 以前に，TwitterでArduinoかラズパイ+近接センサを使用して腕立て伏せの回数を測っている人を見ました，面白いアイデアだったのでとりあえずそれを同じようにスマホでブラウザからやってみることを目標にします．
 
-### 最終的なプロダクト
+## 最終的なプロダクト
 腕立てしている様子を自分で取るのは難しくてできませんでした笑
 `youtube:https://www.youtube.com/embed/PH6q30R4lOg`
 
@@ -69,6 +65,7 @@ MDNで推奨されている方法通りに，PermissionAPIを用いて，使用�
 
 最後にstart()でセンサの読み取りを開始します．
 
+#### main.js
 ```js
 navigator.permissions.query({ name: 'ambient-light-sensor' })
 .then(result => {
@@ -102,7 +99,7 @@ navigator.permissions.query({ name: 'ambient-light-sensor' })
 
 単純に暗いかどうかで腕立て伏せをカウントしています．
 
-#### main.js
+#### sample.js
 
 ```js
 let sensor;
