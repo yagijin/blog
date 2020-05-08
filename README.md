@@ -4,6 +4,10 @@
 
 \`youtube:https://www.youtube.com/embed/2Xc9gXyf2G4\`
 
+## Amazonアソシエイトリンクのの追加の仕方  
+
+\`amazon:{asociateURL}\`  
+
 # Gatsby + Netlify CMS Starter
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/b654c94e-08a6-4b79-b443-7837581b1d8d/deploy-status)](https://app.netlify.com/sites/gatsby-starter-netlify-cms-ci/deploys)
