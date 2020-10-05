@@ -1,0 +1,115 @@
+.kifu {
+  width: 100%;
+  text-align: center;
+  font-weight: bolder;
+  font-size: larger;
+  margin: 0 auto;
+}
+.koma-icon {
+  font-size: xx-large;
+}
+
+.flip-vertical {
+  transform: scale(-1, -1);
+}
+
+.ban {
+  background-color: #2b2523;
+  border-radius: 5px;
+  color: #fff;
+  border: solid 3px grey;
+  border-collapse: collapse;
+}
+
+.ban-piece {
+  border: solid 1.5px grey;
+}
+
+.ban-parent {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin: 10px auto;
+}
+
+.ban-tegoma {
+  list-style: none !important;
+}
+
+.menu-shogi {
+  display: flex;
+  justify-content: center;
+  margin: 10px auto;
+  padding: 0 10px;
+}
+
+.menu-shogi > button {
+  flex: 1;
+  margin: auto 2px;
+}
+
+.menu-shogi > div {
+  flex: 3;
+}
+
+@media screen and (max-width: 500px) { 
+  .menu-shogi {
+    width: 90%;
+  }
+  .ban-tegoma {
+    margin: 0 20px 0 auto;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+  .flip-horizon {
+    margin: 0 auto 0 20px !important;
+  }
+
+  .flip-vertical {
+    margin: 0 20px 0 auto !important;
+  }
+
+  .ban-piece {
+    width: 10vw;
+    height: 11vw;
+  }
+  .ban {
+    width: 80vw;
+  }
+  .ban-parent {
+    align-items: center;
+    flex-direction: column;
+    width: 90vw;
+  }
+}
+
+@media screen and (min-width: 501px) { 
+  .menu-shogi {
+    width: 400px;
+  }
+  .ban-piece {
+    width: 40px;
+    height: 44px;
+  }
+  .ban-tegoma {
+    width: 70px;
+    padding: 0;
+  }
+  .ban-parent {
+    flex-direction: row;
+    width: 500px;
+  }
+}
+
+@media screen and (min-width: 380px) { 
+  .App {
+    text-align: center;
+    font-weight: bolder;
+    font-size: x-large;
+  }
+  .koma-icon {
+    font-size: xx-large;
+  }
+}
