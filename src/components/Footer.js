@@ -12,7 +12,7 @@ const Footer = class extends React.Component {
       <footer className="footer has-background-black has-text-white-ter">
         <div className="content has-text-centered has-background-black has-text-white-ter">
           <div className="container has-background-black has-text-white-ter">
-            <div className="columns">
+            <div className="columns adjust-1">
               <div className="column is-4">
                 <section className="menu">
                   <ul className="menu-list">
@@ -73,9 +73,9 @@ const Footer = class extends React.Component {
                 </a>
               </div>
             </div>
-            <div className="columns">
-              <div className="column is-12">
-                <div>Copyright © Jin Yagi 2020 - All Rights Reserved.</div>
+            <div className="columns adjust-1">
+              <div className="column is-12 adjust-2">
+                Copyright © Jin Yagi 2020 - All Rights Reserved.
               </div>
             </div>
           </div>

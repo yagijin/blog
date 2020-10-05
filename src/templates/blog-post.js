@@ -67,7 +67,7 @@ const BlogPost = ({ data }) => {
   return (
     <Layout>
       <BlogPostTemplate
-        content={post.html}
+        content={post.htmlAst}
         contentComponent={HTMLContent}
         description={post.frontmatter.description}
         date = {post.frontmatter.date}
@@ -100,7 +100,7 @@ export const pageQuery = graphql`
   query BlogPostByID($id: String!) {
     markdownRemark(id: { eq: $id }) {
       id
-      html
+      htmlAst
       frontmatter {
         date(formatString: "MMMM DD, YYYY")
         title
