@@ -8,7 +8,7 @@ const GetAllTags = ({
   },
 }) => (
     <ul className="taglist tag-list">
-      {group.map(tag => (
+      {group.sort(function (a, b) {return b.totalCount - a.totalCount}).filter((_,index)=>{return index<8}).map(tag => (
         <li key={tag.fieldValue} className="tag-all is-primary is-medium tag-child">
           <Link to={`/tags/${kebabCase(tag.fieldValue)}/`} className="tag-child-link">
             {tag.fieldValue} ({tag.totalCount})

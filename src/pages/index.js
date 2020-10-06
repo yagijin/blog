@@ -21,14 +21,14 @@ const IndexPage = () => (
                   </h3>
                   <BlogRoll />
                   <div className="column is-12 has-text-centered"  style={{marginTop: "20px"}}>
-                    <Link className="btn" to="/blog">
+                    <Link className="btn adjust-2" to="/blog">
                       Read more
                     </Link>
                   </div>
                 </div>
               </div>
             </div>
-            <div>
+            <div className="adjust-3">
               <h3 className="has-text-weight-semibold is-size-2 tag-title">
                 人気のタグ
               </h3>

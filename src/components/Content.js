@@ -1,5 +1,4 @@
 import React from 'react'
-import PropTypes from 'prop-types'
 import rehypeReact from "rehype-react"
 import Kifu from "../components/Kifu"
 
@@ -16,12 +15,5 @@ export const HTMLContent = ({ content, className }) => (
 const Content = ({ content, className }) => (
   <div className={className}>{content}</div>
 )
-
-Content.propTypes = {
-  content: PropTypes.node,
-  className: PropTypes.string,
-}
-
-HTMLContent.propTypes = Content.propTypes
 
 export default Content
