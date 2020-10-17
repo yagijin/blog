@@ -62,7 +62,7 @@ PS2_USE_BUSYWAIT = yes
 #   define PS2_DATA_PORT   PORTD
 #   define PS2_DATA_PIN    PIND
 #   define PS2_DATA_DDR    DDRD
-#   define PS2_DATA_BIT    2思います．
+#   define PS2_DATA_BIT    2
 #endif
 ```
 
