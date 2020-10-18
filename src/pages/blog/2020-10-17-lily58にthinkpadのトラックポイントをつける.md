@@ -41,11 +41,16 @@ ThinkPadのトラックポイントにもいくつか型があるみたいで，
 
 今回は,Lily58でOLEDに使用しているピンを割り当てたいので，公式では非推奨のBusywaitバージョンの方法で実装します．
 
+また，トラックポイントは左手につけるので左手のrules.mkとconfig.hを編集します．
+
+まず，PS2Mouseを有効化して，OLEDを無効化します．
+
 #### rules.mk
 
-```{numberLines:
+```{numberLines:true}
 PS2_MOUSE_ENABLE = yes
 PS2_USE_BUSYWAIT = yes
+OLED_DRIVER_ENABLE= no
 ```
 
 たまたま使用しているピンがD1とD2だったので公式の例通りの実装になります．
@@ -53,7 +58,7 @@ PS2_USE_BUSYWAIT = yes
 
 #### config.h
 
-```c++{numberLines:
+```c{numberLines:true}
 #ifdef PS2_USE_BUSYWAIT
 #   define PS2_CLOCK_PORT  PORTD
 #   define PS2_CLOCK_PIN   PIND
@@ -70,7 +75,7 @@ PS2_USE_BUSYWAIT = yes
 
 #### config.h
 
-```c++{numberLines:
+```c{numberLines:true}
 #define PS2_MOUSE_ROTATE 270
 ```
 
