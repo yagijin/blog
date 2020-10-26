@@ -87,3 +87,9 @@ OLED_DRIVER_ENABLE= no
 
 自分はまだないですが，Busywaitバージョンでは，時々キーの取りこぼしがあるみたいなので
 時間があるときにUSARTかInterruptバージョンに実装し直したいと思います．
+
+## 自作キーボード便利アイテム
+
+<iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&bc1=000000&IS2=1&bg1=FFFFFF&fc1=000000&lc1=0000FF&t=yagijinblog-22&language=ja_JP&o=9&p=8&l=as4&m=amazon&f=ifr&ref=as_ss_li_til&asins=B01MXCKHAM&linkId=3572424633128caadcd31cee7b65f620"></iframe>
+
+<iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&bc1=000000&IS2=1&bg1=FFFFFF&fc1=000000&lc1=0000FF&t=yagijinblog-22&language=ja_JP&o=9&p=8&l=as4&m=amazon&f=ifr&ref=as_ss_li_til&asins=B08FKWK3VV&linkId=062a2968c78d92bbc4cd1806b0e86963"></iframe>
